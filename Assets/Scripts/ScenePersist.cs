@@ -6,11 +6,14 @@ using UnityEngine.SceneManagement;
 public class ScenePersist : MonoBehaviour
 {
     int startingSceneIndex;
+
     private void Awake()
     {
-        int numScenePersist = FindObjectsOfType<ScenePersist>().Length;
-        if (numScenePersist > 1)
+
+        int numPersistObjects = FindObjectsOfType<ScenePersist>().Length;
+        if (numPersistObjects > 1)
         {
+            gameObject.SetActive(false);
             Destroy(gameObject);
         }
         else
@@ -18,6 +21,7 @@ public class ScenePersist : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,10 +31,5 @@ public class ScenePersist : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int currSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        if (currSceneIndex != startingSceneIndex)
-        {
-            Destroy(gameObject);
-        }
     }
 }
