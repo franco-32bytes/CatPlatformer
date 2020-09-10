@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7276530583709374671}
   - component: {fileID: 7276530583709374664}
   - component: {fileID: 7276530583709374670}
-  - component: {fileID: 7276530583709374669}
+  - component: {fileID: 7276530583370680533}
   m_Layer: 14
   m_Name: ExitPixelated
   m_TagString: Untagged
@@ -68,7 +68,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1176171527
-  m_SortingLayer: 7
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 90b9519ca5a0ee1488e48d67a13ba1f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -107,7 +107,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
---- !u!114 &7276530583709374669
+--- !u!114 &7276530583370680533
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,6 +116,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7276530583709374665}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fae81b081416d5140bd706c17ff6c382, type: 3}
+  m_Script: {fileID: 11500000, guid: 60d14a35d36dfd949b98fb8a876ab674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

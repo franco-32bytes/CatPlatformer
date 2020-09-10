@@ -36,13 +36,16 @@ public class GameSession : MonoBehaviour
 
     public void ProcessPlayerDeath()
     {
+        var lvlLoader = FindObjectOfType<LevelLoader>();
         if (playerLives > 1)
         {
             TakeLife();
+            lvlLoader.RestartLevel();
         }
         else
         {
-            ResetGameSession();
+            lvlLoader.LoadMainMenu();
+            Destroy(gameObject);
         }
     }
 
@@ -52,17 +55,9 @@ public class GameSession : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
-    private void ResetGameSession()
-    {
-        SceneManager.LoadScene(0); //Back to main menu
-        Destroy(gameObject);
-    }
-
     private void TakeLife()
     {
         playerLives--;
         livesText.text = playerLives.ToString();
-        int currSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currSceneIndex);
     }
 }
