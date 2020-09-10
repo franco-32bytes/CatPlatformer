@@ -11,6 +11,12 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadMainMenu()
     {
+        var scenePersist = FindObjectOfType<ScenePersist>();
+        if (scenePersist != null)
+        {
+            Destroy(scenePersist.gameObject);
+            scenePersist.gameObject.SetActive(false);
+        }
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1;
     }
